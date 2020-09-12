@@ -39,6 +39,7 @@ function generatePassword(criterias) {
   const specialChar = criterias.specialChar;
 
   let characters = "";
+  
   if (lowercase) {
     characters += "abcdefghijklmnopqrstuvwxyz";
   }
@@ -50,6 +51,7 @@ function generatePassword(criterias) {
   if (numbers) {
     characters += "0123456789";
   }
+
   if (specialChar) {
     characters += "!@#$%^&*()";
   }
@@ -99,5 +101,6 @@ function writePassword() {
     return;
   }
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
